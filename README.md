@@ -8,3 +8,8 @@ Trabalho a ser realizado em grupos de 3 a 5 estudantes.
 2. Adicione ao repositório os demais participantes do grupo no gitlab (como developer ou master);
 3. Altere o arquivo `README.md` a adicione informações sobre o grupo.
 
+Grupo:
+
+Lucas Cassilha Zawadneak - GRR20200141
+Renan Cordeiro Ramos - GRR20204516
+Ricardo Giasson Filho - GRR20204465
