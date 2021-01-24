@@ -10,6 +10,9 @@ Trabalho a ser realizado em grupos de 3 a 5 estudantes.
 
 Grupo:
 
+
 Lucas Cassilha Zawadneak - GRR20200141
+
 Renan Cordeiro Ramos - GRR20204516
+
 Ricardo Giasson Filho - GRR20204465
