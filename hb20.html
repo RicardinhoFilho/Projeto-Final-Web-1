@@ -5,23 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HB20 2021</title>
+    <link rel="stylesheet" href="./css/catalogo.css">
 </head>
 
 <body>
-    <h1 style="text-align: center;">HB20 2021</h1>
-    <img src="./imagens/hb20.jpg" alt="Exterior HB20 2021" style="width: 800px; height: 600px;">
-    <img src="./imagens/hb20-interno.jpg" alt="Interior HB20 2021" style="width: 800px; height: 600px;">
+    <header>
+        <div id="logo">
+            <h1>NewCar</h1>
+            <span id="search">
+                <input type="text" placeholder="Pesquisar...">
+                <input type="submit" value="Pesquisar">
+            </span>
+        </div>
+        <div id="first-buttons">
+            <a class="active" href="./index.html">Home</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
 
-    <h2 style="text-align: center;">Conheça o Novo Fiat HB20</h2>
-    <div>
+        </div>
+    </header>
+
+    <h1 id="first-title">HB20 2021</h1>
+    <div id="images">
+        <img src="./imagens/hb20.jpg" alt="Exterior HB20 2021">
+        <img src="./imagens/hb20-interno.jpg" alt="Interior HB20 2021">
+        <img src="./imagens/Hb20Traseira.jpeg" alt="Traseira Hb20">
+    </div>
+
+   
+    <main>
+        <h2>Conheça o Novo Fiat HB20</h2>
         <p style="font-size: 18px;">O novo HB20, exterior lindo e moderno, interior confortável, preço acessível e
             econômico, esse sim veio para colocar de uma vez por todas a concorrência no bolso! Compre já ou se preferir
             venha conhece-lo em nossa loja!</p>
-    </div>
-
-    <div>
+    </main>
+    <div id="description">
+    <div id="table-mecanica">
         <h3>Mecânica</h3>
-        <table width=60% border="1px">
+        <table>
             <tr>
                 <td>Motorização</td>
                 <td>1.6</td>
@@ -86,9 +107,9 @@
         </table>
     </div>
 
-    <div>
+    <div  id="table-dimensoes">
         <h3>Dimensões</h3>
-        <table width=60% border="1px">
+        <table>
             <tr>
                 <td>Altura (mm) </td>
                 <td>1.470</td>
@@ -123,8 +144,8 @@
             </tr>
         </table>
     </div>
-
-    <div>
+    <div id="securityConfortable-container">
+    <div id="seguranca">
         <h3>Segurança</h3>
         <ul>
             <li>airbag motorista</li>
@@ -135,7 +156,7 @@
         </ul>
     </div>
 
-    <div>
+    <div id="conforto">
         <h3>Conforto</h3>
         <ul>
             <li>ar-condicionado</li>
@@ -147,11 +168,16 @@
         </ul>
     </div>
 
-    <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jL5ZPCvYpIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jL5ZPCvYpIQ" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    
+
+    </div>
     </div>
 
-    <div>
+    <div id="comprar">
         <button><a href="comprar.html">Comprar</a></button>
     </div>
 
