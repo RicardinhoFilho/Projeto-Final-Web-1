@@ -177,14 +177,35 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
-    <div id="comprar">
+        <div id="botoes-rodape">
         <button><a href="comprar.html">Comprar</a></button>
+        <button><a href="#" onclick="ModalProposta.open()" class="button new">Negociar</a></button>
+
+
     </div>
 
+    <div class="modal">
+        <div id="formulario">
+            
+            <div id="cabecalho-proposta">
+                <h2 id="title-modal">Faça sua proposta</h2>
+                <a href="#" onclick="ModalProposta.close()">x</a>
+            </div>
+            <form action="" onsubmit="EnviarFormulario.submit(event)">
+            
+                <label for="name">Nome Completo<input type="text" name="name" id="name" placeholder="João da Silva"
+                        required></label>
+                <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com"
+                        required></label>
+                <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx"></label>
+                <label for="mensagem"><textarea name="mensage" id="mensage" cols="30" rows="10"
+                        placeholder="Faça sua proposta aqui!"></textarea></label>
+                <button id="confirmar">Enviar</button>
+            </form>
+        </div>
+    </div>
 
-
-
-
+    <script src="./js/proposta.js"></script>
 </body>
 
 </html>
