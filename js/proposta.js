@@ -1,21 +1,26 @@
-const ModalProposta = {
+// const ModalProposta = {
+//   open() {
+//     //abrir o modal ao clicar em adicionar
+//     //adicionar classe ligado ao nosso modal
+//   },
+//   close() {
+//     //fechar o modal
+//     //precisamos remover a classe ligado
 
-    open() {
+//     document.querySelector(".modal").classList.remove("ligado");
+//   },
+// };
 
-        //abrir o modal ao clicar em adicionar
-        //adicionar classe ligado ao nosso modal
-        document.querySelector('.modal').classList.add('ligado')
-    },
-    close() {
+$(document).ready(function () {
+  $(".modal").hide();
 
-        //fechar o modal
-        //precisamos remover a classe ligado
+  $("#buy").click(function () {
+    document.querySelector(".modal").classList.add("ligado");
+    $(".modal").show();
+  });
 
-        document.querySelector('.modal').classList.remove('ligado')
-    }
-
-}
-
-
-
-
+  $("#close").click(function () {
+    document.querySelector(".modal").classList.remove("ligado");
+    $(".modal").hide();
+  });
+});
