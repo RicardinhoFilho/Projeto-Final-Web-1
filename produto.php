@@ -335,7 +335,7 @@ function DefineVideo()
             </span>
         </div>
         <div id="first-buttons">
-            <a class="active" href="./index.html">Home</a>
+            <a class="active" href="./index.php">Home</a>
             <a href="#about">Sobre</a>
             <a href="#contact">Contato</a>
         </div>
@@ -390,7 +390,7 @@ function DefineVideo()
         <?php echo DefineVideo() ?>
     </div>
     <div id="botoes-rodape">
-        <button><a href="comprar.html">Comprar</a></button>
+        <button><a href="comprar.php">Comprar</a></button>
 
         <button>
             <a href="#" id="buy" class="button new">Negociar</a>
@@ -402,24 +402,22 @@ function DefineVideo()
 
 
     <div class="modal">
-    <div id="formulario">
-      <div id="cabecalho-proposta">
-        <h2 id="title-modal">Faça sua proposta</h2>
-        <a href="#" id="close">x</a>
-      </div>
-      <form action="" onsubmit="EnviarFormulario.submit(event)">
-        <label for="name">Nome Completo<input type="text" name="name" id="name" placeholder="João da Silva"
-            required /></label>
-        <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com"
-            required /></label>
-        <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" /></label>
-        <label for="mensagem">
-          <textarea name="mensage" id="mensage" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
-        </label>
-        <button id="confirmar">Enviar</button>
-      </form>
+        <div id="formulario">
+            <div id="cabecalho-proposta">
+                <h2 id="title-modal">Faça sua proposta</h2>
+                <a href="#" id="close">x</a>
+            </div>
+            <form action="" onsubmit="EnviarFormulario.submit(event)">
+                <label for="name">Nome Completo<input type="text" name="name" id="name" placeholder="João da Silva" required /></label>
+                <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com" required /></label>
+                <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" /></label>
+                <label for="mensagem">
+                    <textarea name="mensage" id="mensage" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
+                </label>
+                <button id="confirmar">Enviar</button>
+            </form>
+        </div>
     </div>
-  </div>
 
     <script src="./js/proposta.js"></script>
 </body>
