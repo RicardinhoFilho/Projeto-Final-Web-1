@@ -52,3 +52,9 @@ form > button {
 form > button:hover {
   opacity: 0.7;
 }
+
+.align-main{
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
