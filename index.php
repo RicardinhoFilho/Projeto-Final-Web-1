@@ -1,3 +1,22 @@
+<?PHP
+
+require "db_credentials.php";
+
+//Criando conexão com o banco de dados
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+//Checado conexão
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT id,img1,nome FROM $table1 WHERE vendido = false";
+if (!($carrosVenda = mysqli_query($conn, $sql))) {
+    die("Problemas para carregar carros do BD! </br>" . mysqli_error($conn));
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -42,15 +61,18 @@
     <div id="Produtos">
         <h2>Conheça nossas opções</h2>
         <div id="itens">
-            <span><a href="/produto.php?n=1"><img src="./imagens/FiatArgo.jpeg" alt="Fiat argo ">
-                    <h3>Argo-1.0-Gasolina-2021</h3>
-                </a>
+            <?php if (mysqli_num_rows($carrosVenda) == 0) : ?>
+                Nenhum carro disponível no momento
+            <?php else : ?>
+                <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
+                    <span><a href="/ds122-project/produto.php?n=<?php echo $produto["id"] ?>"><img src="./imagens/<?php echo $produto["img1"] ?>" alt="Imagem Carro">
+                            <h3><?php echo $produto["nome"] ?></h3>
+                        </a>
 
-            </span>
-            <span> <a href="/produto.php?n=2"><img src="./imagens/hb20.jpg" alt="Hb20">
-                    <h3>HB20-1.0-Gasolina-2021</h3>
-                </a>
-            </span>
+                    </span>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
 
     </div>
