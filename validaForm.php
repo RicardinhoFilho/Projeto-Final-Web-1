@@ -7,6 +7,28 @@ function verifica_campo($texto)
     return $texto;
 }
 
+function celular($telefone){
+    $telefone= trim(str_replace('/', '', str_replace(' ', '', str_replace('-', '', str_replace(')', '', str_replace('(', '', $telefone))))));
+
+    $regexTelefone = "^[0-9]{11}$";
+
+    $regexCel = '/[0-9]{2}[6789][0-9]{3,4}[0-9]{4}/'; // Regex para validar somente celular
+    if (preg_match($regexCel, $telefone)) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function valida_campo($texto){
+
+    if(empty($texto)){
+        return false;
+    }
+
+    return true;
+}
+
 $payment = null;
 $car = null;
 $erro = false;

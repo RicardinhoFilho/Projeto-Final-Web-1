@@ -25,6 +25,5 @@ $(document).ready(function () {
   });
 });
 
-function EnviarFormulario(ev){
-  console.log("teste")
-}
+
+	

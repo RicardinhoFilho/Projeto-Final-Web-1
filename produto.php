@@ -1,6 +1,7 @@
 <?PHP
 
 require "db_credentials.php";
+require "validaForm.php";
 
 //Criando conexão com o banco de dados
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -14,16 +15,25 @@ if (!$conn) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["proposta"])) {
 
-        $id = $_POST["id"];
-        $nome = $_POST["name"];
-        $email = $_POST["email"];
-        $tel = $_POST["tel"];
-        $proposta = $_POST["proposta"];
+        $id = verifica_campo($_POST["id"]);
+        $nome = verifica_campo($_POST["name"]);
+        $email = verifica_campo($_POST["email"]);
+        $tel = verifica_campo($_POST["tel"]);
+        $proposta = verifica_campo($_POST["proposta"]);
 
-        $sql = "INSERT INTO $table3(nome,email,telefone,proposta,produto_id)VALUES('$nome','$email','$tel','$proposta',$id)";
+        //Não deixa passar campos inválidos 
+        if (celular($tel) == true && valida_campo($nome) == true && valida_campo($email) && valida_campo($proposta)) {
+            $sql = "INSERT INTO $table3(nome,email,telefone,proposta,produto_id)VALUES('$nome','$email','$tel','$proposta',$id)";
 
-        if (!mysqli_query($conn, $sql)) {
-            die("Problema para inserir nova proposta no Banco de Dados</br>" . mysqli_error($conn));
+            if (!mysqli_query($conn, $sql)) {
+                die("Problema para inserir nova proposta no Banco de Dados</br>" . mysqli_error($conn));
+            }
+
+
+            echo "<script>window.location='/ds122-project/produto.php?n=$id';alert('$nome, seu formulário de contato foi enviado com sucesso, logo entraremos em contato com você!');</script>";
+        } else {
+
+            echo "<script>window.location='/ds122-project/produto.php?n=$id';alert('$nome, ocorreu algum erro durante o envio de seu formulário');</script>";
         }
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -307,11 +317,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="hidden" name="id" value="<?php echo ($_GET["n"]); ?>">
                 <label for="name">Nome Completo<input type="text" name="name" id="name" placeholder="João da Silva" required /></label>
                 <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com" required /></label>
-                <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" /></label>
-                <label for="mensagem">
-                    <textarea id="mensage" name="proposta" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
+                <label for="tel">Telefone<input type="text" name="tel" id="tel" minlength="11" placeholder="(11)999224340"></label>
+                <label for="proposta">
+                    <textarea id="mensage" name="proposta" cols="30" rows="10" placeholder="Faça sua proposta aqui!" required></textarea>
                 </label>
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" class="close">
             </div>
         </div>
     </form>
@@ -320,6 +330,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     <script src="./js/proposta.js"></script>
+
 </body>
 
 </html>
