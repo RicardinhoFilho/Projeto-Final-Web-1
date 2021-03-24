@@ -20,11 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tel = $_POST["tel"];
         $proposta = $_POST["proposta"];
 
-        
-        $sql = "INSERT INTO  $table3(nome,email,telefone,proposta,produto_id)VALUES('$nome','$email','$tel','$proposta',$id)";
-        echo($sql);
+        $sql = "INSERT INTO $table3(nome,email,telefone,proposta,produto_id)VALUES('$nome','$email','$tel','$proposta',$id)";
+
         if (!mysqli_query($conn, $sql)) {
-            die("Problema para inserir nova tarefa no Banco de Dados</br>" . mysqli_error($conn));
+            die("Problema para inserir nova proposta no Banco de Dados</br>" . mysqli_error($conn));
         }
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -104,9 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <div id="images">
-            <img src="./imagens/<?php echo $produto["img1"] ?>" alt="Exterior <?php echo $produto["nome"]?>">
-            <img src="./imagens/<?php echo $produto["img3"] ?>" alt="Interior <?php echo $produto["nome"]?>">
-            <img src="./imagens/<?php echo $produto["img2"] ?>" alt="Traseira <?php echo $produto["nome"]?>">'
+            <img src="./imagens/<?php echo $produto["img1"] ?>" alt="Exterior <?php echo $produto["nome"] ?>">
+            <img src="./imagens/<?php echo $produto["img3"] ?>" alt="Interior <?php echo $produto["nome"] ?>">
+            <img src="./imagens/<?php echo $produto["img2"] ?>" alt="Traseira <?php echo $produto["nome"] ?>">'
         </div>
 
         <main>
@@ -298,7 +297,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="modal">
             <div id="formulario">
                 <div id="cabecalho-proposta">
@@ -310,7 +309,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com" required /></label>
                 <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" /></label>
                 <label for="mensagem">
-                    <textarea name="mensage" id="mensage" name="proposta" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
+                    <textarea id="mensage" name="proposta" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
                 </label>
                 <input type="submit" value="Enviar">
             </div>
