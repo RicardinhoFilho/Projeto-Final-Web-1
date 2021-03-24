@@ -10,7 +10,24 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["proposta"])) {
+
+        $id = $_POST["id"];
+        $nome = $_POST["name"];
+        $email = $_POST["email"];
+        $tel = $_POST["tel"];
+        $proposta = $_POST["proposta"];
+
+        
+        $sql = "INSERT INTO  $table3(nome,email,telefone,proposta,produto_id)VALUES('$nome','$email','$tel','$proposta',$id)";
+        echo($sql);
+        if (!mysqli_query($conn, $sql)) {
+            die("Problema para inserir nova tarefa no Banco de Dados</br>" . mysqli_error($conn));
+        }
+    }
+} elseif ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     $id;
 
@@ -57,13 +74,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Produto </title>
+
     <link rel="stylesheet" href="./css/catalogo.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/proposta.js"></script>
 </head>
 
 <body>
     <header>
+
         <div id="logo">
             <h1>NewCar</h1>
             <span id="search">
@@ -76,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <a href="#about">Sobre</a>
             <a href="#contact">Contato</a>
         </div>
+
     </header>
     <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
 
@@ -83,9 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 
         <div id="images">
-            <img src="./imagens/<?php echo $produto["img1"] ?>" alt="Exterior Argo 2021">
-            <img src="./imagens/<?php echo $produto["img3"] ?>" alt="Interior Argo 2021">
-            <img src="./imagens/<?php echo $produto["img2"] ?>" alt="Traseira Argo">'
+            <img src="./imagens/<?php echo $produto["img1"] ?>" alt="Exterior <?php echo $produto["nome"]?>">
+            <img src="./imagens/<?php echo $produto["img3"] ?>" alt="Interior <?php echo $produto["nome"]?>">
+            <img src="./imagens/<?php echo $produto["img2"] ?>" alt="Traseira <?php echo $produto["nome"]?>">'
         </div>
 
         <main>
@@ -215,7 +236,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         <?php
                         $cont = 0;
                         $itens;
-
+                        //Exibir somente os itens diferente de nullo
                         while ($cont < 10) {
                             $cont++;
                             if ($seg['item' . $cont] == null) {
@@ -243,6 +264,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         $cont = 0;
                         $itens = "";
 
+                        //Exibir somente os itens diferente de nullo
                         while ($cont < 10) {
                             $cont++;
                             if ($conf['item' . $cont] == null) {
@@ -275,23 +297,26 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 
 
-    <div class="modal">
-        <div id="formulario">
-            <div id="cabecalho-proposta">
-                <h2 id="title-modal">Faça sua proposta</h2>
-                <a href="#" id="close">x</a>
-            </div>
-            <form action="" onsubmit="EnviarFormulario.submit(event)">
+
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+        <div class="modal">
+            <div id="formulario">
+                <div id="cabecalho-proposta">
+                    <h2 id="title-modal">Faça sua proposta</h2>
+                    <a href="#" id="close">x</a>
+                </div>
+                <input type="hidden" name="id" value="<?php echo ($_GET["n"]); ?>">
                 <label for="name">Nome Completo<input type="text" name="name" id="name" placeholder="João da Silva" required /></label>
                 <label for="email">E-mail<input type="email" name="email" id="email" placeholder="seuemail@dominio.com" required /></label>
                 <label for="tel">Telefone<input type="tel" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" /></label>
                 <label for="mensagem">
-                    <textarea name="mensage" id="mensage" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
+                    <textarea name="mensage" id="mensage" name="proposta" cols="30" rows="10" placeholder="Faça sua proposta aqui!"></textarea>
                 </label>
-                <button id="confirmar">Enviar</button>
-            </form>
+                <input type="submit" value="Enviar">
+            </div>
         </div>
-    </div>
+    </form>
+
 
 
 

@@ -24,3 +24,7 @@ $(document).ready(function () {
     $(".modal").hide();
   });
 });
+
+function EnviarFormulario(ev){
+  console.log("teste")
+}
