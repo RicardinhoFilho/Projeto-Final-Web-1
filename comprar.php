@@ -1,5 +1,5 @@
 <?php
-require("form.php");
+require("validaForm.php");
 ?>
 
 
