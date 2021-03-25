@@ -67,12 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link rel="stylesheet" href="./css/comprar.css" />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/index.css" />
-    <title>Compra</title>
-=======
+
     <title>NewCar | Compra</title>
->>>>>>> b78c4c562c586c2568c74202bfbe03a0eadd13e2
+
 </head>
 
 
