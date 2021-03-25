@@ -88,6 +88,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 <input type="date" name="date">
 
                 <img src="./imagens/<?php echo $produto['img1'] ?>" alt="<?php echo $produto['nome'] ?>">
+                <small id="preco" style="
+  text-align: center;
+    font-size: 18px;">R$<?php echo $produto['preco'] ?></small>
 
 
 
