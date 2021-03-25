@@ -23,7 +23,7 @@ if (!($carrosVenda = mysqli_query($conn, $sql))) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>NewCar | Página Inicial</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -40,8 +40,8 @@ if (!($carrosVenda = mysqli_query($conn, $sql))) {
         </div>
         <div id="first-buttons">
             <a class="active" href="./index.php">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#contact">Contato</a>
+            <a href="/static/about.html">Sobre</a>
+            <a href="/static/contact.html">Contato</a>
 
         </div>
     </header>
