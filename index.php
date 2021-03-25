@@ -40,8 +40,8 @@ if (!($carrosVenda = mysqli_query($conn, $sql))) {
         </div>
         <div id="first-buttons">
             <a class="active" href="./index.php">Home</a>
-            <a href="/static/about.html">Sobre</a>
-            <a href="/static/contact.html">Contato</a>
+            <a href="./static/about.html">Sobre</a>
+            <a href="./static/contact.html">Contato</a>
 
         </div>
     </header>
@@ -65,7 +65,7 @@ if (!($carrosVenda = mysqli_query($conn, $sql))) {
                 Nenhum carro disponível no momento
             <?php else : ?>
                 <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
-                    <span><a href="/ds122-project/produto.php?n=<?php echo $produto["id"] ?>"><img src="./imagens/<?php echo $produto["img1"] ?>" alt="Imagem Carro">
+                    <span><a href="./produto.php?n=<?php echo $produto["id"] ?>"><img src="./imagens/<?php echo $produto["img1"] ?>" alt="Imagem Carro">
                             <h3><?php echo $produto["nome"] ?></h3>
                         </a>
 

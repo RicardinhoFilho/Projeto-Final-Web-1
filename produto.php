@@ -86,8 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link rel="stylesheet" href="./css/catalogo.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./js/proposta.js"></script>
+
 </head>
 
 <body>
@@ -96,16 +95,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="logo">
             <h1>NewCar</h1>
             <span id="search">
-                <input type="text" placeholder="Pesquisar..." />
-                <input type="submit" value="Pesquisar" />
+                <input type="text" placeholder="Pesquisar...">
+                <input type="submit" value="Pesquisar">
             </span>
         </div>
         <div id="first-buttons">
             <a class="active" href="./index.php">Home</a>
-            <a href="#about">Sobre</a>
-            <a href="#contact">Contato</a>
-        </div>
+            <a href="./static/about.html">Sobre</a>
+            <a href="./static/contact.html">Contato</a>
 
+        </div>
     </header>
     <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
 
@@ -328,7 +327,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/proposta.js"></script>
 
 </body>
