@@ -293,7 +293,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </div>
         <div id="botoes-rodape">
-            <button><a href="comprar.php">Comprar</a></button>
+            <button><a href="comprar.php?n=<?php echo ($_GET["n"]) ?>">Comprar</a></button>
 
             <button>
                 <a href="#" id="buy" class="button new">Negociar</a>

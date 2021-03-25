@@ -27,14 +27,13 @@ if (mysqli_query($conn, $sql)) {
 
 // sql to create table
 
-
 $sql = "Create TABLE $table1(id INT(6) PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(150) NOT NULL,  descricao VARCHAR(1500) NOT NULL, ano VARCHAR(4) NOT NULL, vendido BOOLEAN DEFAULT false, img1 varchar(30),img2 varchar(30), img3 varchar(30),preco decimal NOT NULL, video varchar(100))";
 if (mysqli_query($conn, $sql)) {
     echo "<br>Database created successfully";
 } else {
     echo "<br>Error creating database: " . mysqli_error($conn);
 }
-$sql = "CREATE TABLE $table2(id INT(6) PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(200) NOT NULL, email VARCHAR(50) NOT NULL, cpf VARCHAR(11) NOT NULL, pagamento TINYINT NOT NULL, produto_id int(6), FOREIGN KEY (produto_id) REFERENCES $table1 (id))";
+$sql = "CREATE TABLE $table2(id INT(6) PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(200) NOT NULL, email VARCHAR(50) NOT NULL, cpf VARCHAR(11) NOT NULL, numCartao varchar(16) NOT NULL,produto_id int(6), FOREIGN KEY (produto_id) REFERENCES $table1 (id))";
 if (mysqli_query($conn, $sql)) {
     echo "<br>Database created successfully";
 } else {

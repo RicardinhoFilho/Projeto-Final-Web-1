@@ -1,4 +1,6 @@
 <?php
+
+//protege aplicaçlão contra risco
 function verifica_campo($texto)
 {
     $texto = trim($texto);
@@ -7,6 +9,7 @@ function verifica_campo($texto)
     return $texto;
 }
 
+//Valida num de telefone
 function celular($telefone){
     $telefone= trim(str_replace('/', '', str_replace(' ', '', str_replace('-', '', str_replace(')', '', str_replace('(', '', $telefone))))));
 
@@ -20,6 +23,7 @@ function celular($telefone){
     }
 }
 
+//bloqueia formulkário vázio
 function valida_campo($texto){
 
     if(empty($texto)){
@@ -29,47 +33,67 @@ function valida_campo($texto){
     return true;
 }
 
-$payment = null;
-$car = null;
-$erro = false;
+//filtra somente os números do cartão
+function TraduzCard($texto){
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ $texto = preg_replace('/[^0-9]/', '', $texto);   
 
-    if (empty($_POST["nome"])) {
-        $erro_nome = "Nome é obrigatório.";
-        $erro = true;
-    }
-    if (empty($_POST["email"])) {
-        $erro_email = "Email é obrigatório.";
-        $erro = true;
-    }
-    if (empty($_POST["CPF"])) {
-        $erro_CPF = "Nascimento é obrigatório.";
-        $erro = true;
-    }
-    if (empty($_POST["payment"])) {
-        $erro_payment = "Senha é obrigatório.";
-        $erro = true;
-    }
-    if (empty($_POST["car"])) {
-        $erro_car = "Verificação senha é obrigatório.";
-        $erro = true;
+return $texto;
+}
+
+//verifica se possui 16 digitos
+function ValidaCard($card){
+
+    $teste = (int)strlen($card);
+
+    if($teste == 16){
+        return true;
     }
 
+    return false;
+}
 
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $erro_email = "Insira email válido.";
-        $erro = true;
+
+//valida cpf
+function validaCPF($cpf) {
+ 
+    // Extrai somente os números
+    $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+     
+    // Verifica se foi informado todos os digitos corretamente
+    if (strlen($cpf) != 11) {
+        return false;
     }
 
-    if ($erro) {
-        return -1;
+    // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+    if (preg_match('/(\d)\1{10}/', $cpf)) {
+        return false;
     }
 
+    // Faz o calculo para validar o CPF
+    for ($t = 9; $t < 11; $t++) {
+        for ($d = 0, $c = 0; $c < $t; $c++) {
+            $d += $cpf[$c] * (($t + 1) - $c);
+        }
+        $d = ((10 * $d) % 11) % 10;
+        if ($cpf[$c] != $d) {
+            return false;
+        }
+    }
+    return true;
 
-    $nome = verifica_campo($_POST["nome"]);
-    $email = verifica_campo($_POST["email"]);
-    $CPF = verifica_campo($_POST["CPF"]);
-    $payment = verifica_campo($_POST["payment"]);
-    $car = verifica_campo($_POST["car"]);
+}
+
+//valida código de segurança de tres números
+function checaCodSeguranca($cod){
+
+    $cod = preg_replace( '/[^0-9]/is', '', $cod );
+    
+    $teste = (int)strlen($cod);
+
+    if($teste == 3){
+        return true;
+    }
+
+    return false;
 }
