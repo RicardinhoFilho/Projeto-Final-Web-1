@@ -46,8 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             if (!($efetuada = mysqli_query($conn, $sql))) {
                 die("Problemas para carregar carros do BD! </br>" . mysqli_error($conn));
             }
+
+            echo "<script>window.location='/ds122-project/comprar.php?n=$produto';alert('Parabéns $nome, sua compra efetuada com sucesso 0x128512;,  logo entraremos em contato com você para tratarmos melhor a questão da entrega!')</script>";
         } else {
-            echo "<script>window.location='/ds122-project/comprar.php?n=$produto';alert('$nome, possui o campo CPF/Numero do cartão incorreto');</script>";
+            echo "<script>window.location='/ds122-project/comprar.php?n=$produto';alert('$nome, você digitou algum campo incorretamente, tente de novo, e preste mais atenção em seu CPF e dados do cartão!');</script>";
         }
     }
 }
@@ -63,7 +65,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="./css/comprar.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Compra</title>
 </head>
 
