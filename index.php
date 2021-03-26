@@ -34,8 +34,10 @@ if (!($carrosVenda = mysqli_query($conn, $sql))) {
         <div id="logo">
             <h1>NewCar</h1>
             <span id="search">
-                <input type="text" placeholder="Pesquisar...">
-                <input type="submit" value="Pesquisar">
+                <form action="./pesquisa.php" method="Get">
+                    <input type="text" name="chave" placeholder="Pesquise um modelo..." required>
+                    <input type="submit" value="Pesquisar">
+                </form>
             </span>
         </div>
         <div id="first-buttons">

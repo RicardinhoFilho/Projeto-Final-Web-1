@@ -10,23 +10,25 @@ function verifica_campo($texto)
 }
 
 //Valida num de telefone
-function celular($telefone){
-    $telefone= trim(str_replace('/', '', str_replace(' ', '', str_replace('-', '', str_replace(')', '', str_replace('(', '', $telefone))))));
+function celular($telefone)
+{
+    $telefone = trim(str_replace('/', '', str_replace(' ', '', str_replace('-', '', str_replace(')', '', str_replace('(', '', $telefone))))));
 
     $regexTelefone = "^[0-9]{11}$";
 
     $regexCel = '/[0-9]{2}[6789][0-9]{3,4}[0-9]{4}/'; // Regex para validar somente celular
     if (preg_match($regexCel, $telefone)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
 //bloqueia formulkário vázio
-function valida_campo($texto){
+function valida_campo($texto)
+{
 
-    if(empty($texto)){
+    if (empty($texto)) {
         return false;
     }
 
@@ -34,19 +36,21 @@ function valida_campo($texto){
 }
 
 //filtra somente os números do cartão
-function TraduzCard($texto){
+function TraduzCard($texto)
+{
 
- $texto = preg_replace('/[^0-9]/', '', $texto);   
+    $texto = preg_replace('/[^0-9]/', '', $texto);
 
-return $texto;
+    return $texto;
 }
 
 //verifica se possui 16 digitos
-function ValidaCard($card){
+function ValidaCard($card)
+{
 
     $teste = (int)strlen($card);
 
-    if($teste == 16){
+    if ($teste == 16) {
         return true;
     }
 
@@ -55,11 +59,12 @@ function ValidaCard($card){
 
 
 //valida cpf
-function validaCPF($cpf) {
- 
+function validaCPF($cpf)
+{
+
     // Extrai somente os números
-    $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
-     
+    $cpf = preg_replace('/[^0-9]/is', '', $cpf);
+
     // Verifica se foi informado todos os digitos corretamente
     if (strlen($cpf) != 11) {
         return false;
@@ -81,19 +86,26 @@ function validaCPF($cpf) {
         }
     }
     return true;
-
 }
 
 //valida código de segurança de tres números
-function checaCodSeguranca($cod){
+function checaCodSeguranca($cod)
+{
 
-    $cod = preg_replace( '/[^0-9]/is', '', $cod );
-    
+    $cod = preg_replace('/[^0-9]/is', '', $cod);
+
     $teste = (int)strlen($cod);
 
-    if($teste == 3){
+    if ($teste == 3) {
         return true;
     }
 
     return false;
+}
+
+function quebraFrase($frase)
+{
+    $array = explode(' ', $frase);
+
+    return $array;
 }

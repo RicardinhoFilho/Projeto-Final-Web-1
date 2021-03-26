@@ -76,6 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 
 <body>
+
+  
+
     <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
         <div id="container">
 

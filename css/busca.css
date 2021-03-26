@@ -1,0 +1,16 @@
+
+h1.cont{
+    margin: 2em;
+}
+ul{
+    margin: auto; 
+}
+li{
+    margin-top: 1em;
+    
+    list-style-type: none;
+   
+    text-align: center;
+    
+    
+}
