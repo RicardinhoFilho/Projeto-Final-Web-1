@@ -60,25 +60,34 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/comprar.css" />
-
     <title>NewCar | Compra</title>
-
 </head>
 
-
-
-
 <body>
-
-  
-
+    <header>
+        <div id="logo">
+            <h1>NewCar</h1>
+            <span id="search">
+                <form action="../pesquisa.php" method="Get">
+                    <input type="text" name="chave" placeholder="Pesquise um modelo..." required>
+                    <input type="submit" value="Pesquisar">
+                </form>
+            </span>
+        </div>
+        <div id="first-buttons">
+            <a class="active" href="../index.php">Home</a>
+            <a href="./about.html">Sobre</a>
+            <a href="./contact.html">Contato</a>
+        </div>
+    </header>
     <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
         <div id="container">
 
