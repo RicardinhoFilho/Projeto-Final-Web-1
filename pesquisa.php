@@ -19,11 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $cont = 0;
         while ($cont <= count($frase)) {
 
-            if($frase[$cont] != null){
-            $sql =  "SELECT * FROM grr20204465_tb_produtos WHERE nome LIKE '%$frase[$cont]%'";
-            }
-            if (!($busca = mysqli_query($conn, $sql))) {
-                die("Problemas para carregar Seguraças do BD! </br>" . mysqli_error($conn));
+            if ($frase[$cont] != null) {
+                $sql =  "SELECT * FROM grr20204465_tb_produtos WHERE nome LIKE '%$frase[$cont]%'";
+
+                if (!($busca = mysqli_query($conn, $sql))) {
+                    die("Problemas para carregar Seguraças do BD! </br>" . mysqli_error($conn));
+                }
             }
 
             $cont++;
