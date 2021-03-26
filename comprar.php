@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />

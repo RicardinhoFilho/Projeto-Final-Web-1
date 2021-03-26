@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($_GET["n"])) {
         $id = $_GET['n'];
-        echo $id;
         $sql = "SELECT * FROM $table1 where id =$id";
     }
 
@@ -77,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -135,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </tr>
                             <tr>
                                 <td>Combustível</td>
-                                <td><?php echo $mec["combstvel"] ?></td>
+                                <td><?php echo $mec["combustvel"] ?></td>
                             </tr>
                             <tr>
                                 <td>Potência</td>
