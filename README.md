@@ -1,18 +1,105 @@
 # DS122 - Projeto
 
-Este é o repositório de que deverá armazenar o Projeto de DS122 do início ao final da disciplina.
+<h1 style="text-align: center;">Projeto de DS122 WEB 1</h1>
 
-Trabalho a ser realizado em grupos de 3 a 5 estudantes.
+<h2>Autores:</h2>
+<ul>
+    <li><a href="https://github.com/lucaszawadneak">Lucas Cassilha Zawadneak</a></li>
+    <li><a href="https://github.com/Renan-git">Renan Cordeiro Ramos</a></li>
+    <li><a href="https://github.com/RicardinhoFilho">Ricardo Pinto Giasson Filho </a></li>
+</ul>
 
-1. Apenas um membro do grupo deve fazer o fork deste repositório e armazená-lo em seu grupo do gitlab da disciplia;
-2. Adicione ao repositório os demais participantes do grupo no gitlab (como developer ou master);
-3. Altere o arquivo `README.md` a adicione informações sobre o grupo.
+<h2>Tecnologias Utilizadas</h2>
+<ul>
+    <li>HTML</li>
+    <li>
+        CSS <ul>
+            <li>Boostrap</li>
+        </ul>
+    </li>
+    <li>JavaScript
+        <ul>
+            <li>JQuery</li>
+        </ul>
+    </li>
+    <li>PHP</li>
+    <li>MySql</li>
+</ul>
 
-Grupo:
+<h2>Como Utilizar</h2>
+<ol>
+    <li>Realizar o clone do projeto na pasta raiz do seu servidor web;</li>
+    <li>Alterar o arquivo <code>db_credentials.php</code> com as credencias de seu banco MySql;</li>
+    <li>Acessar <code>cria_db_tabela.php</code>(arquivo responsável por criar o Banco e reespectivas tabelas);</li>
+    <li>Acessar <code>alimentaTabelas.php</code>(Este arquivo alimenta as tabelas com alguns produtos);</li>
+</ol>
 
+<h2>Objetivo do Projeto</h2>
+<p>Projeto desenvolvido durante o curso de WEB-1(UFPR) ministrada pelo professor <a
+        href="https://github.com/alexkutzke">Alex Kutzkea<a>, com objetivo finalização do curso praticando todas as
+            técnologias abordadas pela discplina!</p>
 
-Lucas Cassilha Zawadneak - GRR20200141
+<h2>Descrição do Projeto</h2>
+<p>A <code>index.php</code> é a página principal de nosso projeto:<br><br> <img src="./readmeGifs/index.png"
+        alt="Imagem Index" style="width: 50%; margin-left: 20%;">
+    <br><br>Exibimos o cabeçalho de nossa página com links
+<ul>
+    <li>Home</li>
+    <li>Sobre</li>
+    <li>Contato</li>
+</ul>
+Além de nossa campo de busca. Também Exibimos todos os carros disponíveis para compra!
+</p>
+<p>É possível clicar em cima dos carros para navegarmos para <code>produto.php</code><br><br>
 
-Renan Cordeiro Ramos - GRR20204516
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/visualizarArgo.webm"
+        alt="GifARGO"></iframe>
+    <br><br>
+    Nesta página temos uma visão melhor do carro, com dados mais detalhados como mecância, segurança e conforto, além de
+    um vídeo de propaganda! Dentro desta página é possivel utilizarmos o recurso "Proposta", que abre um Modal de
+    cadastro, para o usuário entrar em contato com a equipe de atendimento da empre MyCar:
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/proposta.webm" alt="GifARGO"></iframe>
+    <br><br>
+    Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados! <br>
 
-Ricardo Giasson Filho - GRR20204465
+    Dentro da página <code>produto.php</code> é possível acessar o vídeo referentre ao produto:
+
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/kwidComprar.webm"
+        alt="GifARGO"></iframe>
+    <br><br>
+</p>
+<p>A página <code>comprar.php</code> apresenta ao nosso usuário o veículo que ele selecionou e um formulário para
+    confirmar a compra.
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/testeForm.webm"
+        alt="GifARGO"></iframe>
+    <br><br>
+    Como podemos ver no exemplo acima, nosso usuário simulou uma o preenchimento com dados indevidos(cpf:"11122233395" e
+    código de segurança:"abc"), invalidando o envioo de seu formulário!
+
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/compraSuc.webm"
+        alt="GifARGO"></iframe>
+    <br><br>
+    Já no exemplo acima, simulamos uma compra com dados válidos!
+    Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a compra deste porduto impossível:
+    <br><br>
+    <img src="./readmeGifs/indexAtualizado.png" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
+    <br><br>
+    Na imagem acima, podemos perceber que o produto HB20 já não consta mais em nossa lista de produtos disponíveis!
+
+</p>
+<p>Támbém podemos navegar sobre os links de nosso cabeçalho e interagir com o campo de busca:
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/naveg.webm" alt="GifARGO"></iframe>
+    <br><br>
+    Podemos fazer qualquer tipo de pesquisa:
+    <br><br>
+    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/busca.webm" alt="GifARGO"></iframe>
+    <br><br>
+    Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Está tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
+</p>
+
+<img src="./readmeGifs/busca.webm" alt="">
