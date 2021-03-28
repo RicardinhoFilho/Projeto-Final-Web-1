@@ -56,7 +56,7 @@ Além de nossa campo de busca. Também Exibimos todos os carros disponíveis par
         alt="GIF Compra Executada" style="width: 50%; margin-left: 20%;">
     <br><br>
    
-    Nesta página temos uma visão melhor do carro, com dados mais detalhados como mecância, segurança e conforto, além de
+Nesta página temos uma visão melhor do carro, com dados mais detalhados como mecância, segurança e conforto, além de
     um vídeo de propaganda! Dentro desta página é possivel utilizarmos o recurso "Proposta", que abre um Modal de
     cadastro, para o usuário entrar em contato com a equipe de atendimento da empre MyCar:
  <br><br> <img src="./readmeGifs/proposta.gif"
@@ -64,9 +64,9 @@ Além de nossa campo de busca. Também Exibimos todos os carros disponíveis par
     <br><br>
    
    
-    Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados! <br>
+Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados! <br>
 
-    Dentro da página <code>produto.php</code> é possível acessar o vídeo referentre ao produto:
+Dentro da página <code>produto.php</code> é possível acessar o vídeo referentre ao produto:
     
 <br><br> <img src="./readmeGifs/kwidComprar.gif"
         alt="GIF Compra Executada" style="width: 50%; margin-left: 20%;">
@@ -86,8 +86,8 @@ Além de nossa campo de busca. Também Exibimos todos os carros disponíveis par
     <br><br>
 
     
-    Já no exemplo acima, simulamos uma compra com dados válidos!
-    Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a compra deste porduto impossível:
+Já no exemplo acima, simulamos uma compra com dados válidos!
+Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a compra deste porduto impossível:
     <br><br>
  <img src="./readmeGifs/indexAtualizado.png" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
@@ -104,6 +104,6 @@ Além de nossa campo de busca. Também Exibimos todos os carros disponíveis par
     <img src="./readmeGifs/busca.gif" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
     
-    Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Está tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
+Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Está tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
 </p>
 
