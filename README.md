@@ -52,54 +52,58 @@ Além de nossa campo de busca. Também Exibimos todos os carros disponíveis par
 </p>
 <p>É possível clicar em cima dos carros para navegarmos para <code>produto.php</code><br><br>
 
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/visualizarArgo.webm"
-        alt="GifARGO"></iframe>
+ <br><br> <img src="./readmeGifs/visualizarArgo.gif"
+        alt="GIF Compra Executada" style="width: 50%; margin-left: 20%;">
     <br><br>
+   
     Nesta página temos uma visão melhor do carro, com dados mais detalhados como mecância, segurança e conforto, além de
     um vídeo de propaganda! Dentro desta página é possivel utilizarmos o recurso "Proposta", que abre um Modal de
     cadastro, para o usuário entrar em contato com a equipe de atendimento da empre MyCar:
+ <br><br> <img src="./readmeGifs/proposta.gif"
+        alt="GIF efetuando proposta" style="width: 50%; margin-left: 20%;">
     <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/proposta.webm" alt="GifARGO"></iframe>
-    <br><br>
+   
+   
     Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados! <br>
 
     Dentro da página <code>produto.php</code> é possível acessar o vídeo referentre ao produto:
-
+    
+<br><br> <img src="./readmeGifs/kwidComprar.gif"
+        alt="GIF Compra Executada" style="width: 50%; margin-left: 20%;">
     <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/kwidComprar.webm"
-        alt="GifARGO"></iframe>
-    <br><br>
+   
 </p>
 <p>A página <code>comprar.php</code> apresenta ao nosso usuário o veículo que ele selecionou e um formulário para
     confirmar a compra.
-    <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/testeForm.webm"
-        alt="GifARGO"></iframe>
+    <br><br> <img src="./readmeGifs/testeForm.gif"
+        alt="GIF formulário proposta" style="width: 50%; margin-left: 20%;">
     <br><br>
     Como podemos ver no exemplo acima, nosso usuário simulou uma o preenchimento com dados indevidos(cpf:"11122233395" e
     código de segurança:"abc"), invalidando o envioo de seu formulário!
+    
+<br><br> <img src="./readmeGifs/compraSuc.gif"
+        alt="GIF Compra Executada" style="width: 50%; margin-left: 20%;">
+    <br><br>
 
-    <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/compraSuc.webm"
-        alt="GifARGO"></iframe>
-    <br><br>
+    
     Já no exemplo acima, simulamos uma compra com dados válidos!
     Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a compra deste porduto impossível:
     <br><br>
-    <img src="./readmeGifs/indexAtualizado.png" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
+ <img src="./readmeGifs/indexAtualizado.png" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
     Na imagem acima, podemos perceber que o produto HB20 já não consta mais em nossa lista de produtos disponíveis!
 
 </p>
 <p>Támbém podemos navegar sobre os links de nosso cabeçalho e interagir com o campo de busca:
-    <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/naveg.webm" alt="GifARGO"></iframe>
+    
+<br><br>
+    <img src="./readmeGifs/naveg.gif" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
     Podemos fazer qualquer tipo de pesquisa:
+     <br><br>
+    <img src="./readmeGifs/busca.gif" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
-    <iframe style="width:400px; height:300px;margin-left: 20%;" src="./readmeGifs/busca.webm" alt="GifARGO"></iframe>
-    <br><br>
+    
     Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Está tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
 </p>
 
-<img src="./readmeGifs/busca.webm" alt="">
