@@ -76,16 +76,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         <div id="logo">
             <h1>NewCar</h1>
             <span id="search">
-                <form action="../pesquisa.php" method="Get">
+                <form action="./pesquisa.php" method="Get">
                     <input type="text" name="chave" placeholder="Pesquise um modelo..." required>
                     <input type="submit" value="Pesquisar">
                 </form>
             </span>
         </div>
         <div id="first-buttons">
-            <a class="active" href="../index.php">Home</a>
-            <a href="./about.html">Sobre</a>
-            <a href="./contact.html">Contato</a>
+            <a class="active" href="./static/index.php">Home</a>
+            <a href="./static/about.html">Sobre</a>
+            <a href="./static/contact.html">Contato</a>
         </div>
     </header>
     <?php while ($produto = mysqli_fetch_assoc($carrosVenda)) : ?>
