@@ -64,7 +64,7 @@ Nesta página temos uma visão melhor do carro, com dados mais detalhados como m
     <br><br>
    
    
-Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados! <br>
+Ao prencheer estes campos corretamente, os dados do cliente serão gravados em nosso banco de dados,para que posteriormente a equipe da agência NewCar entre em contato! <br>
 
 Dentro da página <code>produto.php</code> é possível acessar o vídeo referentre ao produto:
     
@@ -88,6 +88,9 @@ Dentro da página <code>produto.php</code> é possível acessar o vídeo referen
     
 Já no exemplo acima, simulamos uma compra com dados válidos!
 Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a compra deste porduto impossível:
+<br><br>
+ <img src="./readmeGifs/indis.gif" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
+    <br><br>
     <br><br>
  <img src="./readmeGifs/indexAtualizado.png" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
@@ -104,6 +107,6 @@ Perceba que agora, nosso HB20 já consta como Indisponivel, e já se tornando a 
     <img src="./readmeGifs/busca.gif" alt="Imagem Index" style="width: 50%; margin-left: 20%;">
     <br><br>
     
-Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Está tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
+Nossa página nos retorna o maior número de itens encontrados, separando palavra por palavra. Quando pesquisamos Fiat 2020 por exemplo, a nossa página nos  tras todos os fiats, todos os fiats 2020 e todos os carros 2020. Esta tática é usada para despertar mais ainda o interesse sobre nosso cliente! 
 </p>
 
