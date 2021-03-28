@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             </span>
         </div>
         <div id="first-buttons">
-            <a class="active" href="./static/index.php">Home</a>
+            <a class="active" href="./index.php">Home</a>
             <a href="./static/about.html">Sobre</a>
             <a href="./static/contact.html">Contato</a>
         </div>
